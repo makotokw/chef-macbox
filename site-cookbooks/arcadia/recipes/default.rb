@@ -17,7 +17,8 @@
 # limitations under the License.
 #
 
-p node[:user]
-p node[:platform]
+p node[:os]
+p node[:os_version]
 p node[:platform_family]
+p node[:platform]
 p node[:platform_version]
