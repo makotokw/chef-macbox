@@ -1,0 +1,7 @@
+DEPENDENCIES
+  dmg
+  homebrew
+
+GRAPH
+  dmg (2.2.0)
+  homebrew (1.6.4)
