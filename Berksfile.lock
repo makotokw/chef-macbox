@@ -1,7 +1,9 @@
 DEPENDENCIES
   dmg
   homebrew
+  mac_os_x
 
 GRAPH
   dmg (2.2.0)
   homebrew (1.6.4)
+  mac_os_x (1.4.6)

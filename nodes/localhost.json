@@ -1,1 +1,8 @@
-{"run_list":[]}
+{
+  "user":{
+        "name": "makoto_kw",
+        "group" : "staff",
+        "home": "/Users/makoto_kw"
+  },
+  "run_list":[]
+}

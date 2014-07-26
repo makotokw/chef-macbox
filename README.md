@@ -3,16 +3,47 @@ chef-macbox
 
 makoto_kw's development environment for Mac.
 
-## Prepare chef-solo
+## Requirements
 
-Install chef-solo to system's ruby instead of ``knife solo prepare``.
+- `mac_os_x`
+- `homebrew`
+- `Xcode Command Line Tools`
 
-```
-rbenv local system
-sudo gem i knife-solo berkshelf
-```
-## Execute chef-solo
+## Prepare
 
 ```
-knife solo cook localhost -o "arcadia"
+sudo gem install bundler
+bundle install --path=vendor/bundle
+berks vendor cookbooks
 ```
+
+## Setup
+
+```
+sudo bundle exec rake cook[arcadia]
+sudo bundle exec rake cook[pebble-dev]
+```
+
+## Development
+
+add cookbook
+
+```
+bundle exec knife cookbook create sample_book -C "Makoto Kawasaki" -I apachev2 -m "makoto.kw@gmail.com" -r md -o site-cookbooks
+```
+
+lint cookbook
+
+```
+bundle exec rake foodcritic
+```
+
+### node.attribute
+
+|key|example value|
+|:--|:--|
+|node[:os]|darwin|
+|node[:os_version]|13.3.0|
+|node[:platform_family]|mac_os_x|
+|node[:platform]|mac_os_x|
+|node[:platform_version]|10.9.4|
