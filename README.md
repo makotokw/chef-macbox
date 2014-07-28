@@ -14,7 +14,7 @@ makoto_kw's development environment for Mac.
 ```
 sudo gem install bundler
 bundle install --path=vendor/bundle
-berks vendor cookbooks
+bundle exec berks vendor cookbooks
 ```
 
 ## Setup

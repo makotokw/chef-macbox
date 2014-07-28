@@ -39,7 +39,6 @@ raise("Donwload #{node[:pebble_dev][:sdk_dirname]}.tar.gz from #{node[:pebble_de
 
 bash "extract #{node[:pebble_dev][:sdk_dirname]}.tar.gz" do
   cwd node[:pebble_dev][:dev_root]
-  # code 'ls /var/chef'
   code <<-EOH
     su #{node[:pebble_dev][:user]}
     cd #{node[:pebble_dev][:dev_root]}
