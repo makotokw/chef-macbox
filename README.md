@@ -21,6 +21,7 @@ bundle exec berks vendor cookbooks
 
 ```
 sudo bundle exec rake cook[arcadia]
+sudo bundle exec rake cook[wp-cli]
 sudo bundle exec rake cook[pebble-dev]
 ```
 
