@@ -17,8 +17,5 @@
 # limitations under the License.
 #
 
-p node[:os]
-p node[:os_version]
-p node[:platform_family]
-p node[:platform]
-p node[:platform_version]
+# ansible
+package 'ansible'

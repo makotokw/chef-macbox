@@ -1,15 +1,15 @@
 {
   "name":"localhost",
   "user":{
-        "name": "makoto_kw",
-        "group" : "staff",
-        "home": "/Users/makoto_kw"
+    "name": "makoto_kw",
+    "group": "staff",
+    "home": "/Users/makoto_kw"
   },
   "wp_cli": {
-      "user": {
-          "name": "makoto_kw"
-      },
-      "community_packages": []
+    "user": {
+      "name": "makoto_kw"
+    },
+    "community_packages": []
   },
   "run_list":[]
 }
