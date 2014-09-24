@@ -32,10 +32,10 @@ end
 #   owner node[:pebble_dev][:user]
 #   group node[:pebble_dev][:group]
 #   mode 00644
-#   not_if { ::Dir.exists?(node[:pebble_dev][:sdk_path]) }
+#   not_if { ::Dir.exist?(node[:pebble_dev][:sdk_path]) }
 # end
 
-raise("Donwload #{node[:pebble_dev][:sdk_dirname]}.tar.gz from #{node[:pebble_dev][:sdk_url]}") unless ::File.exists?(node[:pebble_dev][:sdk_archive_file])
+raise("Donwload #{node[:pebble_dev][:sdk_dirname]}.tar.gz from #{node[:pebble_dev][:sdk_url]}") unless ::File.exist?(node[:pebble_dev][:sdk_archive_file])
 
 bash "extract #{node[:pebble_dev][:sdk_dirname]}.tar.gz" do
   cwd node[:pebble_dev][:dev_root]
@@ -44,7 +44,7 @@ bash "extract #{node[:pebble_dev][:sdk_dirname]}.tar.gz" do
     cd #{node[:pebble_dev][:dev_root]}
     tar -zxf #{node[:pebble_dev][:sdk_archive_file]}
   EOH
-  only_if { !::Dir.exists?(node[:pebble_dev][:sdk_path]) && ::File.exists?(node[:pebble_dev][:sdk_archive_file]) }
+  only_if { !::Dir.exist?(node[:pebble_dev][:sdk_path]) && ::File.exist?(node[:pebble_dev][:sdk_archive_file]) }
 end
 
 remote_file "#{Chef::Config['file_cache_path']}/arm-cs-tools-static.tar.gz" do
@@ -52,7 +52,7 @@ remote_file "#{Chef::Config['file_cache_path']}/arm-cs-tools-static.tar.gz" do
   owner node[:pebble_dev][:user]
   group node[:pebble_dev][:group]
   mode 00644
-  only_if { ::Dir.exists?(node[:pebble_dev][:sdk_path]) }
+  only_if { ::Dir.exist?(node[:pebble_dev][:sdk_path]) }
 end
 bash "extract arm-cs-tools-static.tar.gz" do
   cwd node[:pebble_dev][:sdk_path]
@@ -60,7 +60,7 @@ bash "extract arm-cs-tools-static.tar.gz" do
     su #{node[:pebble_dev][:user]}
     tar -zxf #{Chef::Config['file_cache_path']}/arm-cs-tools-static.tar.gz
   EOH
-  only_if { ::Dir.exists?(node[:pebble_dev][:sdk_path]) }
+  only_if { ::Dir.exist?(node[:pebble_dev][:sdk_path]) }
 end
 
 bash "install python package for PebbleSDK" do
@@ -75,7 +75,7 @@ bash "install python package for PebbleSDK" do
     CFLAGS="" pip install -r #{node[:pebble_dev][:sdk_path]}/requirements.txt --upgrade
     deactivate
   EOH
-  only_if { ::Dir.exists?(node[:pebble_dev][:sdk_path]) }
+  only_if { ::Dir.exist?(node[:pebble_dev][:sdk_path]) }
 end
 
 bash "fixed permission PebbleSDK" do
@@ -83,5 +83,5 @@ bash "fixed permission PebbleSDK" do
   code <<-EOH
     chown -R #{node[:pebble_dev][:user]}:#{node[:pebble_dev][:group]} #{node[:pebble_dev][:sdk_path]}
   EOH
-  only_if { ::Dir.exists?(node[:pebble_dev][:sdk_path]) }
+  only_if { ::Dir.exist?(node[:pebble_dev][:sdk_path]) }
 end
