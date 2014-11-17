@@ -17,5 +17,7 @@
 # limitations under the License.
 #
 
+package 'tree'
+
 # ansible
 package 'ansible'
