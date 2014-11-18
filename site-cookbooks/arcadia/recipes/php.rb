@@ -1,3 +1,4 @@
+# php.ini
 template "#{node[:arcadia][:php][:conf_path]}/conf.d/arcadia.ini" do
   source 'php/conf.d/arcadia.ini.erb'
   owner node[:user][:name]
@@ -5,6 +6,10 @@ template "#{node[:arcadia][:php][:conf_path]}/conf.d/arcadia.ini" do
   mode 00644
 end
 
+# composer
+package 'composer'
+
+# phpcs
 bash "install phpcs" do
   cwd node[:user][:home]
   group node[:user][:group]

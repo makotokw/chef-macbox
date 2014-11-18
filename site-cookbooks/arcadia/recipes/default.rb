@@ -17,7 +17,13 @@
 # limitations under the License.
 #
 
-package 'tree'
+# basic packages
+%w{tree pwgen ssh-copy-id wget}.each do |pkg|
+  package pkg
+end
+
+# git
+package 'git'
 
 # ansible
 package 'ansible'
