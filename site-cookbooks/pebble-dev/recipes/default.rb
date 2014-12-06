@@ -35,7 +35,7 @@ end
 #   not_if { ::Dir.exist?(node[:pebble_dev][:sdk_path]) }
 # end
 
-raise("Donwload #{node[:pebble_dev][:sdk_dirname]}.tar.gz from #{node[:pebble_dev][:sdk_url]}") unless ::File.exist?(node[:pebble_dev][:sdk_archive_file])
+raise("Donwload #{node[:pebble_dev][:sdk_dirname]}.tar.gz from https://developer.getpebble.com/sdk/download/") unless ::File.exist?(node[:pebble_dev][:sdk_archive_file])
 
 bash "extract #{node[:pebble_dev][:sdk_dirname]}.tar.gz" do
   cwd node[:pebble_dev][:dev_root]
