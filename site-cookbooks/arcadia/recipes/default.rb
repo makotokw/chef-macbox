@@ -21,3 +21,18 @@ package 'tree'
 
 # ansible
 package 'ansible'
+
+# project dir
+directory node[:arcadia][:project_path] do
+  owner node[:user][:name]
+  group node[:user][:group]
+  mode 00755
+  action :create
+end
+
+directory "#{node[:arcadia][:project_path]}/contrib" do
+  owner node[:user][:name]
+  group node[:user][:group]
+  mode 00755
+  action :create
+end
