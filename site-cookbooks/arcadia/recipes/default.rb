@@ -24,6 +24,7 @@ end
 
 # git
 package 'git'
+package 'hub'
 
 # ansible
 package 'ansible'
