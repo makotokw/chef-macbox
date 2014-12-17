@@ -9,3 +9,10 @@ bash "setup_npm_package" do
   EOH
   environment 'HOME' => node[:user][:home]
 end
+
+bash "fix npm files" do
+  code <<-EOH
+    chown -R #{node[:user][:name]} #{node[:user][:home]}/.npm
+    chown -R #{node[:user][:name]} /usr/local/lib/node_modules
+  EOH
+end
