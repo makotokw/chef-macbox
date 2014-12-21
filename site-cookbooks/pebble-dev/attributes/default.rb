@@ -1,4 +1,4 @@
-default[:pebble_dev][:version] = '2.8'
+default[:pebble_dev][:version] = '2.8.1'
 default[:pebble_dev][:sdk_dirname] = "PebbleSDK-#{node[:pebble_dev][:version]}"
 default[:pebble_dev][:arm_toolchain_url] = 'http://assets.getpebble.com.s3-website-us-east-1.amazonaws.com/sdk/arm-cs-tools-macos-universal-static.tar.gz'
 
