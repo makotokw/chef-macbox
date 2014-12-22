@@ -78,6 +78,14 @@ bash "install python package for PebbleSDK" do
   only_if { ::Dir.exist?(node[:pebble_dev][:sdk_path]) }
 end
 
+# http://developer.getpebble.com/guides/publishing-tools/pebble-tool/
+file "#{node[:pebble_dev][:dev_root]}/NO_TRACKING" do
+  owner node[:pebble_dev][:user]
+  group node[:pebble_dev][:group]
+  mode 00644
+  action :touch
+end
+
 bash "fixed permission PebbleSDK" do
   cwd node[:pebble_dev][:sdk_path]
   code <<-EOH
