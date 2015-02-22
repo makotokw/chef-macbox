@@ -29,6 +29,17 @@ package 'hub'
 # ansible
 package 'ansible'
 
+# gettext
+package 'gettext'
+bash "link gettext" do
+  cwd node[:user][:home]
+  user node[:user][:name]
+  group node[:user][:group]
+  code <<-EOH
+    brew link --force gettext
+  EOH
+end
+
 # project dir
 directory node[:arcadia][:project_path] do
   owner node[:user][:name]
