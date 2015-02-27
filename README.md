@@ -24,6 +24,7 @@ bundle exec rake cook[arcadia]
 bundle exec rake cook[wp-cli]
 bundle exec rake cook[pebble-dev]
 bundle exec rake cook[arcadia::php]
+bundle exec rake cook[arcadia::xcode]
 ```
 
 ## Development
