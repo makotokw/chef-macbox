@@ -1,5 +1,14 @@
 plugin_path = "#{node[:arcadia][:project_path]}/contrib/XcodePlugins"
 
+homebrew_package 'remove xcproj' do
+  package_name 'xcproj'
+  action :remove
+end
+homebrew_package 're-install xcproj' do
+  package_name 'xcproj'
+  action :install
+end
+
 directory plugin_path do
   owner node[:user][:name]
   group node[:user][:group]
@@ -21,6 +30,7 @@ git "#{plugin_path}/Dash-Plugin-for-Xcode" do
   user node[:user][:name]
   group node[:user][:group]
   action :sync
+  only_if { ::Dir.exist?('/Applications/Dash.app/') }
 end
 
 # build by xcodebuild = install plugin
