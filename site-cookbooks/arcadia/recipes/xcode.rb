@@ -13,6 +13,7 @@ directory plugin_path do
   owner node[:user][:name]
   group node[:user][:group]
   mode 00755
+  recursive true
   action :create
 end
 
