@@ -38,5 +38,6 @@ end
 %w{BBUncrustifyPlugin-Xcode Dash-Plugin-for-Xcode}.each do |plugin|
   execute 'xcodebuild' do
     cwd "#{plugin_path}/#{plugin}"
+    only_if { ::Dir.exist?("#{plugin_path}/#{plugin}") }
   end
 end
