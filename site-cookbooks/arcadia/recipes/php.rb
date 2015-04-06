@@ -15,7 +15,7 @@ git "#{node[:arcadia][:project_path]}/contrib/WordPress-Coding-Standards" do
 end
 
 # Symfony
-ash "install symfony" do
+bash "install symfony" do
   cwd node[:user][:home]
   user node[:user][:name]
   group node[:user][:group]
