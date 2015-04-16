@@ -1,3 +1,3 @@
-package 'node'
+homebrew_package 'node'
 
-execute 'npm install -g grunt-cli bower'
+execute 'npm install -g gulp grunt-cli bower'
