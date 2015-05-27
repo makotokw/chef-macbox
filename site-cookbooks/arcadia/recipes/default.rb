@@ -19,18 +19,18 @@
 
 # basic packages
 %w{tree pwgen ssh-copy-id wget}.each do |pkg|
-  package pkg
+  homebrew_package pkg
 end
 
 # git
-package 'git'
-package 'hub'
+homebrew_package 'git'
+homebrew_package 'hub'
 
 # ansible
-package 'ansible'
+homebrew_package 'ansible'
 
 # gettext
-package 'gettext'
+homebrew_package 'gettext'
 bash "link gettext" do
   cwd node[:user][:home]
   user node[:user][:name]

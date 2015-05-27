@@ -1,10 +1,10 @@
-default[:pebble_dev][:version] = '2.8.1'
+default[:pebble_dev][:version] = '2.9'
 default[:pebble_dev][:sdk_dirname] = "PebbleSDK-#{node[:pebble_dev][:version]}"
 default[:pebble_dev][:arm_toolchain_url] = 'http://assets.getpebble.com.s3-website-us-east-1.amazonaws.com/sdk/arm-cs-tools-macos-universal-static.tar.gz'
 
 case node[:platform_family]
 when 'mac_os_x'
-  echo_user = Mixlib::ShellOut.new('echo $SUDO_USER')
+  echo_user = Mixlib::ShellOut.new('whoami')
   echo_user.run_command
   default[:pebble_dev][:user] = echo_user.stdout.strip
   default[:pebble_dev][:group] = 'staff'

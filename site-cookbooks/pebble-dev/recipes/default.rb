@@ -17,8 +17,8 @@
 # limitations under the License.
 #
 
-package 'python'
-package 'freetype'
+homebrew_package 'python'
+homebrew_package 'freetype'
 
 directory node[:pebble_dev][:dev_root] do
   owner node[:pebble_dev][:user]
