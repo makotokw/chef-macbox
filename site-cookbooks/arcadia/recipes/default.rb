@@ -29,6 +29,9 @@ homebrew_package 'hub'
 # ansible
 homebrew_package 'ansible'
 
+# build tools
+homebrew_package 'ant'
+
 # gettext
 homebrew_package 'gettext'
 bash "link gettext" do
