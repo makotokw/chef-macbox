@@ -1,4 +1,11 @@
-node[:arcadia][:php][:packages].each do |pkg|
+homebrew_tap 'homebrew/dupes'
+homebrew_tap 'josegonzalez/homebrew-php'
+
+homebrew_package node[:arcadia][:php][:package] do
+  options node[:arcadia][:php][:package_option]
+end
+
+node[:arcadia][:php][:ext_packages].each do |pkg|
   homebrew_package pkg
 end
 
@@ -31,7 +38,7 @@ bash "install symfony" do
   environment 'HOME' => node[:user][:home]
 end
 
-
+# php_codesniffer
 bash "install phpcs" do
   cwd node[:user][:home]
   user node[:user][:name]
