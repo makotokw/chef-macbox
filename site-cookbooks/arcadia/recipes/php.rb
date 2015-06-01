@@ -9,6 +9,9 @@ node[:arcadia][:php][:ext_packages].each do |pkg|
   homebrew_package pkg
 end
 
+# composer
+homebrew_package 'composer'
+
 # php.ini
 template "#{node[:arcadia][:php][:conf_path]}/conf.d/arcadia.ini" do
   source 'php/conf.d/arcadia.ini.erb'
