@@ -43,6 +43,9 @@ bash "link gettext" do
   EOH
 end
 
+# design tools
+homebrew_package 'graphviz'
+
 # project dir
 directory node[:arcadia][:project_path] do
   owner node[:user][:name]
