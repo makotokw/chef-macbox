@@ -54,9 +54,24 @@ directory node[:arcadia][:project_path] do
   action :create
 end
 
+# contrib
 directory "#{node[:arcadia][:project_path]}/contrib" do
   owner node[:user][:name]
   group node[:user][:group]
   mode 00755
   action :create
 end
+
+# Gemfile for tools
+template "#{node[:arcadia][:project_path]}/Gemfile" do
+  source 'developer-tools/Gemfile.erb'
+  owner node[:user][:name]
+  group node[:user][:group]
+  mode 00644
+end
+
+# make user execute to require root permission
+puts <<-EOH
+  Put "#{node[:arcadia][:project_path]}/Gemfile"
+  Installation: pushd #{node[:arcadia][:project_path]}; bundle install; popd;
+EOH
