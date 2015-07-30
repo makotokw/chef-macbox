@@ -32,6 +32,9 @@ homebrew_package 'ansible'
 # build tools
 homebrew_package 'ant'
 
+# for rubygems mysql2
+homebrew_package 'mysql'
+
 # gettext
 homebrew_package 'gettext'
 bash "link gettext" do
@@ -45,6 +48,8 @@ end
 
 # design tools
 homebrew_package 'graphviz'
+homebrew_package 'imagemagick'
+
 
 # project dir
 directory node[:arcadia][:project_path] do
