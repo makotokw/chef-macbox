@@ -22,6 +22,10 @@
   homebrew_package pkg
 end
 
+# cask http://caskroom.io/
+homebrew_tap 'caskroom/cask'
+homebrew_package 'brew-cask'
+
 # git
 homebrew_package 'git'
 homebrew_package 'hub'
