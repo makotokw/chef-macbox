@@ -5,6 +5,11 @@
     "group": "staff",
     "home": "/Users/makoto_kw"
   },
+  "arcadia": {
+    "cask_applications": [
+      "slack"
+    ]
+  },
   "wp_cli": {
     "user": {
       "name": "makoto_kw"

@@ -27,6 +27,7 @@ bundle exec rake cook[arcadia::rbenv]
 bundle exec rake cook[arcadia::php]
 bundle exec rake cook[arcadia::xcode]
 bundle exec rake cook[arcadia::spark]
+bundle exec rake cook[arcadia::application]
 ```
 
 ## Development
