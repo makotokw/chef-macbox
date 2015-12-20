@@ -4,6 +4,9 @@ default[:arcadia][:project_path] = "#{node[:user][:home]}/arcadia"
 # cask Applications
 default[:arcadia][:cask_application] = []
 
+# nodejs
+default[:arcadia][:nodejs][:version] = '5.2.0'
+
 # php
 default[:arcadia][:php][:package] = 'php55'
 default[:arcadia][:php][:package_option] = '--with-homebrew-openssl --without-apache'
