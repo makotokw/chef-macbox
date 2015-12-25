@@ -1,10 +1,10 @@
 homebrew_tap 'homebrew/dupes'
 
-homebrew_package node[:arcadia][:php][:package] do
-  options node[:arcadia][:php][:package_option]
+homebrew_package node[:arcadia][:php5][:package] do
+  options node[:arcadia][:php5][:package_option]
 end
 
-node[:arcadia][:php][:ext_packages].each do |pkg|
+node[:arcadia][:php5][:ext_packages].each do |pkg|
   homebrew_package pkg
 end
 
@@ -12,7 +12,7 @@ end
 homebrew_package 'composer'
 
 # php.ini
-template "#{node[:arcadia][:php][:conf_path]}/conf.d/arcadia.ini" do
+template "#{node[:arcadia][:php5][:conf_path]}/conf.d/arcadia.ini" do
   source 'php/conf.d/arcadia.ini.erb'
   owner node[:user][:name]
   group 'admin'

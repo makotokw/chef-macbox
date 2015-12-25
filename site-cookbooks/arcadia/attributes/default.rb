@@ -8,7 +8,7 @@ default[:arcadia][:cask_application] = []
 default[:arcadia][:nodejs][:version] = '5.2.0'
 
 # php
-default[:arcadia][:php][:package] = 'php55'
-default[:arcadia][:php][:package_option] = '--with-homebrew-openssl --without-apache'
-default[:arcadia][:php][:ext_packages] = %w{php55-memcache php55-mcrypt php55-xdebug phpunit}
-default[:arcadia][:php][:conf_path] = '/usr/local/etc/php/5.5'
+default[:arcadia][:php5][:package] = 'php55'
+default[:arcadia][:php5][:package_option] = '--with-homebrew-openssl --without-apache'
+default[:arcadia][:php5][:ext_packages] = %w{php55-memcache php55-mcrypt php55-xdebug phpunit}
+default[:arcadia][:php5][:conf_path] = '/usr/local/etc/php/5.5'
