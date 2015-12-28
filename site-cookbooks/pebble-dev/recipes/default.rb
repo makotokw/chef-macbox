@@ -23,7 +23,7 @@ homebrew_tap 'pebble/pebble-sdk'
 # homebrew_package 'pebble/pebble-sdk/pebble-sdk'
 
 # http://developer.getpebble.com/guides/publishing-tools/pebble-tool/
-file "#{node[:pebble_dev][:home]}/pebble_dev/NO_TRACKING" do
+file "#{node[:pebble_dev][:user_home]}/Library/Application Support/Pebble SDK/NO_TRACKING" do
   owner node[:pebble_dev][:user]
   group node[:pebble_dev][:group]
   mode 00644
