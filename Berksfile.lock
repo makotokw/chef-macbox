@@ -7,7 +7,7 @@ DEPENDENCIES
     revision: 03978e4467ee8ce6925c35a4ac68266674240f5e
 
 GRAPH
-  build-essential (2.2.3)
+  build-essential (2.2.4)
   dmg (2.2.2)
   homebrew (1.13.0)
     build-essential (>= 2.1.2)
