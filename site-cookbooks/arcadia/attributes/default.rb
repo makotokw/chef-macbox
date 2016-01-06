@@ -5,8 +5,8 @@ default[:arcadia][:project_path] = "#{node[:user][:home]}/arcadia"
 default[:arcadia][:cask_application] = []
 
 # ruby
-default[:arcadia][:rbenv][:install_versions] = ['1.9.3-p545', '2.0.0-p451', '2.2.4']
-default[:arcadia][:rbenv][:default_version] = 'system'
+default[:arcadia][:rbenv][:install_versions] = ['1.9.3-p551', '2.0.0-p648', '2.2.4']
+default[:arcadia][:rbenv][:default_version] = '2.0.0-p648'
 
 # nodejs
 default[:arcadia][:nodejs][:version] = '5.2.0'

@@ -20,3 +20,4 @@ puts "Executes commands to install ruby: "
 node[:arcadia][:rbenv][:install_versions].each do |version|
   puts "  rbenv install #{version}" unless ::Dir.exist?("#{rbenv_root}/versions/#{version}")
 end
+puts "rbenv global #{node[:arcadia][:rbenv][:default_version]}"
