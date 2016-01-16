@@ -52,7 +52,6 @@ end
 homebrew_package 'graphviz'
 homebrew_package 'imagemagick'
 
-
 # project dir
 directory node[:arcadia][:project_path] do
   owner node[:user][:name]
@@ -68,17 +67,3 @@ directory "#{node[:arcadia][:project_path]}/contrib" do
   mode 00755
   action :create
 end
-
-# Gemfile for tools
-template "#{node[:arcadia][:project_path]}/Gemfile" do
-  source 'developer-tools/Gemfile.erb'
-  owner node[:user][:name]
-  group node[:user][:group]
-  mode 00644
-end
-
-# make user execute to require root permission
-puts <<-EOH
-  Put "#{node[:arcadia][:project_path]}/Gemfile"
-  Installation: pushd #{node[:arcadia][:project_path]}; bundle install; popd;
-EOH
