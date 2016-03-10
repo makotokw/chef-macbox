@@ -12,6 +12,7 @@ makoto_kw's development environment for Mac.
 ## Prepare
 
 ```
+# before installing rbenv
 sudo gem i bundler -n /usr/local/bin
 bundle install --path=vendor/bundle
 bundle exec berks vendor cookbooks
