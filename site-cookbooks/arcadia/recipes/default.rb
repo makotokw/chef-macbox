@@ -22,9 +22,6 @@
   homebrew_package pkg
 end
 
-# cask
-include_recipe 'arcadia::cask'
-
 # git
 include_recipe 'arcadia::git'
 

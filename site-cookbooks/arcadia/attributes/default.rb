@@ -2,6 +2,7 @@
 default[:arcadia][:project_path] = "#{node[:user][:home]}/arcadia"
 
 # cask Applications
+default[:arcadia][:cask_applications_require_interactive] = []
 default[:arcadia][:cask_application] = []
 
 # ruby

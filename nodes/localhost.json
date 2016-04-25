@@ -6,8 +6,25 @@
     "home": "/Users/makoto_kw"
   },
   "arcadia": {
+    "cask_applications_require_interactive": [
+      "alfred",
+      "astah-community"
+    ],
     "cask_applications": [
-      "slack"
+      "lynxlet",
+      "jing",
+      "0xed",
+      "beyond-compare",
+      "sourcetree",
+      "uncrustifyx",
+      "charles",
+      "ganttproject",
+      "xmind",
+      "skype",
+      "slack",
+      "adafruit-arduino",
+      "bittorrent",
+      "minecraft"
     ]
   },
   "wp_cli": {
