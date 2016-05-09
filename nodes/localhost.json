@@ -8,7 +8,8 @@
   "arcadia": {
     "cask_applications_require_interactive": [
       "alfred",
-      "astah-community"
+      "astah-community",
+      "sdformatter"
     ],
     "appstore_applications": [
     ],
@@ -29,7 +30,6 @@
       "minecraft",
       "mysqlworkbench",
       "mysqlworkbench",
-      "sdformatter",
       "sketch",
       "skitch",
       "skype",
