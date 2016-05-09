@@ -10,23 +10,33 @@
       "alfred",
       "astah-community"
     ],
+    "appstore_applications": [
+    ],
     "cask_applications": [
-      "lynxlet",
-      "jing",
       "0xed",
+      "adafruit-arduino",
+      "android-file-transfer",
+      "appzapper",
+      "araxis-merge-2013",
       "beyond-compare",
-      "sourcetree",
-      "uncrustifyx",
+      "bittorrent",
       "charles",
+      "fritzing",
       "ganttproject",
-      "xmind",
+      "jing",
+      "kindle",
+      "lynxlet",
+      "minecraft",
+      "mysqlworkbench",
+      "mysqlworkbench",
+      "sdformatter",
+      "sketch",
+      "skitch",
       "skype",
       "slack",
-      "sketch",
-      "adafruit-arduino",
-      "fritzing",
-      "bittorrent",
-      "minecraft"
+      "sourcetree",
+      "uncrustifyx",
+      "xmind"
     ]
   },
   "wp_cli": {

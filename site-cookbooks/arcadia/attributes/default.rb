@@ -2,8 +2,9 @@
 default[:arcadia][:project_path] = "#{node[:user][:home]}/arcadia"
 
 # cask Applications
+default[:arcadia][:cask_taps] = ['caskroom/versions', 'makotokw/cask']
 default[:arcadia][:cask_applications_require_interactive] = []
-default[:arcadia][:cask_application] = []
+default[:arcadia][:cask_applications] = []
 
 # ruby
 default[:arcadia][:rbenv][:install_versions] = ['1.9.3-p551', '2.0.0-p648', '2.2.4']

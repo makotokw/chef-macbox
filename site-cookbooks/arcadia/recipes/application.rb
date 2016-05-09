@@ -1,4 +1,8 @@
 # Applications by cask
+node[:arcadia][:cask_taps].each do |tap|
+  homebrew_tap tap
+end
+
 node[:arcadia][:cask_applications].each do |application|
   homebrew_cask application
 end
