@@ -11,7 +11,15 @@ default[:arcadia][:rbenv][:install_versions] = ['1.9.3-p551', '2.0.0-p648', '2.2
 default[:arcadia][:rbenv][:default_version] = '2.0.0-p648'
 
 # nodejs
-default[:arcadia][:nodejs][:version] = '5.2.0'
+default[:arcadia][:nodejs][:pacakge_manager] = 'nvm'
+default[:arcadia][:nodejs][:version] = case node[:arcadia][:nodejs][:pacakge_manager]
+when 'nvm'
+  # node: this installs the latest version of node
+  'node'
+when 'nodebrew'
+  '5.2.0'
+end
+default[:arcadia][:nodejs][:npm_packages] = %w{yo bower grunt-cli gulp}
 
 # php
 default[:arcadia][:php5][:package] = 'php55'
