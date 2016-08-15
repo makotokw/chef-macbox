@@ -15,7 +15,8 @@ default[:arcadia][:nodejs][:pacakge_manager] = 'nvm'
 default[:arcadia][:nodejs][:version] = case node[:arcadia][:nodejs][:pacakge_manager]
 when 'nvm'
   # node: this installs the latest version of node
-  'node'
+  # 'node'
+  'v5.12.0'
 when 'nodebrew'
   '5.2.0'
 end
