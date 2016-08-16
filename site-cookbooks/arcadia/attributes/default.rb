@@ -25,5 +25,5 @@ default[:arcadia][:nodejs][:npm_packages] = %w{yo bower grunt-cli gulp}
 # php
 default[:arcadia][:php5][:package] = 'php55'
 default[:arcadia][:php5][:package_option] = '--with-homebrew-openssl --without-apache'
-default[:arcadia][:php5][:ext_packages] = %w{php55-memcache php55-mcrypt php55-xdebug phpunit}
+default[:arcadia][:php5][:ext_packages] = %w{php55-memcache php55-mcrypt php55-xdebug}
 default[:arcadia][:php5][:conf_path] = '/usr/local/etc/php/5.5'
