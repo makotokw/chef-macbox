@@ -1,4 +1,4 @@
-homebrew_tap 'homebrew/dupes'
+homebrew_tap 'homebrew/php'
 
 homebrew_package node[:arcadia][:php5][:package] do
   options node[:arcadia][:php5][:package_option]
