@@ -39,17 +39,6 @@ bash "install phpcs" do
   environment 'HOME' => node[:user][:home]
 end
 
-# PHP Mess Detector
-bash "install phpmd" do
-  cwd node[:user][:home]
-  user node[:user][:name]
-  group node[:user][:group]
-  code <<-EOH
-    composer global require phpmd/phpmd
-  EOH
-  environment 'HOME' => node[:user][:home]
-end
-
 # Symfony
 bash "install symfony" do
   cwd node[:user][:home]
