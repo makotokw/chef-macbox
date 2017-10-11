@@ -31,6 +31,6 @@ end
 puts <<-EOH
   rbenv global #{node[:arcadia][:rbenv][:default_version]}
   gem update --system
-  gem i bundler;
+  gem i bundler
   pushd #{node[:arcadia][:project_path]}; bundle install; popd;
 EOH

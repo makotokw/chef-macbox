@@ -23,7 +23,6 @@ bundle exec berks vendor cookbooks
 ```
 bundle exec rake cook[arcadia]
 bundle exec rake cook[wp-cli]
-bundle exec rake cook[arcadia::pebble]
 bundle exec rake cook[arcadia::rbenv]
 bundle exec rake cook[arcadia::php5]
 bundle exec rake cook[arcadia::nodejs]
