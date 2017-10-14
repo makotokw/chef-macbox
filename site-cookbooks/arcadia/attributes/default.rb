@@ -27,3 +27,8 @@ default[:arcadia][:php5][:package] = 'php56'
 default[:arcadia][:php5][:package_option] = '--with-homebrew-openssl --without-apache'
 default[:arcadia][:php5][:ext_packages] = %w{php56-memcache php56-mcrypt php56-xdebug}
 default[:arcadia][:php5][:conf_path] = '/usr/local/etc/php/5.6'
+
+default[:arcadia][:php7][:package] = 'php70'
+default[:arcadia][:php7][:package_option] = '--with-homebrew-openssl --without-apache'
+default[:arcadia][:php7][:ext_packages] = %w{php70-mcrypt php70-xdebug}
+default[:arcadia][:php7][:conf_path] = '/usr/local/etc/php/7.0'

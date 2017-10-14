@@ -16,20 +16,5 @@ template "#{node[:arcadia][:php5][:conf_path]}/conf.d/arcadia.ini" do
   mode 00644
 end
 
-# composer
-homebrew_package 'composer'
-
-# Symfony
-bash "install symfony" do
-  cwd node[:user][:home]
-  user node[:user][:name]
-  group node[:user][:group]
-  code <<-EOH
-    curl -LsS http://symfony.com/installer > symfony.phar
-    sudo mv symfony.phar /usr/local/bin/symfony
-    chmod a+x /usr/local/bin/symfony
-  EOH
-  environment 'HOME' => node[:user][:home]
-end
-
+include_recipe 'arcadia::php-composer'
 include_recipe 'arcadia::php-phpcs'

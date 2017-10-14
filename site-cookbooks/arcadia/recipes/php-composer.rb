@@ -1,0 +1,1 @@
+homebrew_package 'composer'
