@@ -16,6 +16,11 @@ makoto_kw's development environment for Mac.
 sudo gem i bundler -n /usr/local/bin
 bundle install --path=vendor/bundle
 bundle exec berks vendor cookbooks
+
+# after installing rbenv
+rbenv exec gem i bundler
+bundle install --path=vendor/bundle
+bundle exec berks vendor cookbooks
 ```
 
 ## Setup

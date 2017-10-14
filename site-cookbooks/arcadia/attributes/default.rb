@@ -7,7 +7,7 @@ default[:arcadia][:cask_applications_require_interactive] = []
 default[:arcadia][:cask_applications] = []
 
 # ruby
-default[:arcadia][:rbenv][:install_versions] = ['1.9.3-p551', '2.0.0-p648', '2.2.4', ' 2.3.3']
+default[:arcadia][:rbenv][:install_versions] = ['2.3.3']
 default[:arcadia][:rbenv][:default_version] = '2.3.3' # for macOS High Sierra
 
 # nodejs
