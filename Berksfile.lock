@@ -7,7 +7,7 @@ DEPENDENCIES
     revision: 03978e4467ee8ce6925c35a4ac68266674240f5e
 
 GRAPH
-  dmg (4.0.0)
-  homebrew (4.2.0)
+  dmg (4.1.1)
+  homebrew (5.0.4)
   mac_os_x (1.4.6)
   wp-cli (0.2.1)
