@@ -35,6 +35,7 @@ bundle exec rake cook[arcadia::nodejs]
 bundle exec rake cook[arcadia::xcode]
 bundle exec rake cook[arcadia::spark]
 bundle exec rake cook[arcadia::application]
+bundle exec rake cook[arcadia::jenkins]
 ```
 
 ## Development
