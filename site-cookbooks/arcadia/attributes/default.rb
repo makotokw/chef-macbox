@@ -11,8 +11,10 @@ default[:arcadia][:rbenv][:install_versions] = ['2.3.3']
 default[:arcadia][:rbenv][:default_version] = '2.3.3' # for macOS High Sierra
 
 # nodejs
-default[:arcadia][:nodejs][:pacakge_manager] = 'nvm'
+default[:arcadia][:nodejs][:pacakge_manager] = 'n'
 default[:arcadia][:nodejs][:version] = case node[:arcadia][:nodejs][:pacakge_manager]
+when 'n'
+  'stable'
 when 'nvm'
   # node: this installs the latest version of node
   # 'node'
@@ -20,7 +22,7 @@ when 'nvm'
 when 'nodebrew'
   '5.2.0'
 end
-default[:arcadia][:nodejs][:npm_packages] = %w{yo bower grunt-cli gulp}
+default[:arcadia][:nodejs][:npm_packages] = %w{yarn bower grunt-cli gulp}
 
 # php
 default[:arcadia][:php5][:package] = 'php56'

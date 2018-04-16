@@ -1,4 +1,14 @@
 case node[:arcadia][:nodejs][:pacakge_manager]
+when 'n'
+  homebrew_package 'node'
+  bash 'install node by n' do
+    code <<-EOH
+      npm cache clean -f
+      npm install -g n
+      sudo n #{node[:arcadia][:nodejs][:version]}
+      npm install -g #{node[:arcadia][:nodejs][:npm_packages].join(' ')}
+    EOH
+  end
 when 'nvm'
   # https://github.com/hokaccha/nodebrew
   execute 'wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash' do
