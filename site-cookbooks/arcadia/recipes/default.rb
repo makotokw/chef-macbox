@@ -17,6 +17,10 @@
 # limitations under the License.
 #
 
+homebrew_tap 'homebrew/versions' do
+  action :untap
+end
+
 # basic packages
 %w{tree pwgen ssh-copy-id wget}.each do |pkg|
   homebrew_package pkg
@@ -24,9 +28,6 @@ end
 
 # git
 include_recipe 'arcadia::git'
-
-# ansible
-homebrew_package 'ansible'
 
 # build tools
 homebrew_package 'ant'

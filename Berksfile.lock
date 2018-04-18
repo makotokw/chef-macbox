@@ -1,6 +1,6 @@
 DEPENDENCIES
   dmg
-  homebrew
+  homebrew (~> 5.0.4)
   mac_os_x
   wp-cli
     git: https://github.com/makotokw/cookbook-wp-cli

@@ -1,7 +1,5 @@
-homebrew_tap 'homebrew/php'
-
 homebrew_package node[:arcadia][:php5][:package] do
-  options node[:arcadia][:php5][:package_option]
+  options node[:arcadia][:php5][:package_option] if node[:arcadia][:php5][:package_option]
 end
 
 node[:arcadia][:php5][:ext_packages].each do |pkg|
