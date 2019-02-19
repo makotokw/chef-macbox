@@ -24,12 +24,6 @@ when 'nodebrew'
 end
 default[:arcadia][:nodejs][:npm_packages] = %w{yarn bower grunt-cli gulp}
 
-# php
-default[:arcadia][:php5][:package] = 'php@5.6'
-default[:arcadia][:php5][:package_option] = nil
-default[:arcadia][:php5][:ext_packages] = %w{}
-default[:arcadia][:php5][:conf_path] = '/usr/local/etc/php/5.6'
-
 default[:arcadia][:php7][:package] = 'php'
 default[:arcadia][:php7][:package_option] = nil
 default[:arcadia][:php7][:ext_packages] = %w{}
