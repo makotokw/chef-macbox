@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
     <key>Label</key>
@@ -17,7 +15,8 @@
       <string>-Dfile.encoding=utf-8</string>
       <string>-jar</string>
       <string>/usr/local/opt/jenkins/libexec/jenkins.war</string>
-      <string>--httpPort=31688</string>
+      <string>--httpListenAddress=0.0.0.0</string>
+      <string>--httpPort=<%= node['arcadia']['jenkins']['port'] %></string>
     </array>
     <key>EnvironmentVariables</key>
     <dict>

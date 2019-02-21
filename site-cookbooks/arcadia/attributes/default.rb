@@ -24,7 +24,11 @@ when 'nodebrew'
 end
 default['arcadia']['nodejs']['npm_packages'] = %w{yarn bower grunt-cli gulp}
 
+# php
 default['arcadia']['php7']['package'] = 'php'
 default['arcadia']['php7']['package_option'] = nil
 default['arcadia']['php7']['ext_packages'] = %w{}
 default['arcadia']['php7']['conf_path'] = '/usr/local/etc/php/7.2'
+
+# jenkins
+default['arcadia']['jenkins']['port'] = 31688
