@@ -1,6 +1,24 @@
-/.chef/
-/.bundle/
-/cookbooks/
-/vendor/
-/_tmp/
-/.idea/
+/.chef
+/_tmp
+
+### JetBrains
+
+/.idea
+
+### OSX
+
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+### https://raw.github.com/github/gitignore/f0e244ef210c1ed5c468cc8c82f3e63527376492/ChefCookbook.gitignore
+
+.vagrant
+/cookbooks
+
+# Bundler
+bin/*
+.bundle/*
+
+.kitchen/
+.kitchen.local.yml

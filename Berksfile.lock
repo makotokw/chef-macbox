@@ -1,13 +1,13 @@
 DEPENDENCIES
-  dmg
-  homebrew (~> 5.0.4)
-  mac_os_x
+  homebrew (~> 5.0.8)
+  macos (~> 2.10.1)
   wp-cli
     git: https://github.com/makotokw/cookbook-wp-cli
     revision: 03978e4467ee8ce6925c35a4ac68266674240f5e
 
 GRAPH
-  dmg (4.1.1)
-  homebrew (5.0.4)
-  mac_os_x (1.4.6)
+  chef-sugar (5.0.0)
+  homebrew (5.0.8)
+  macos (2.10.1)
+    chef-sugar (~> 5.0)
   wp-cli (0.2.1)
