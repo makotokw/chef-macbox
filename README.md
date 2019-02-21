@@ -45,7 +45,7 @@ knife cookbook create sample_book -C "Makoto Kawasaki" -I apachev2 -m "makoto.kw
 ### checkstyle cookbook
 
 ```
-foodcritic -t ~FC001 site-cookbooks
+foodcritic -t ~supermarket -t ~license site-cookbooks
 ```
 
 ### macOS node.attribute

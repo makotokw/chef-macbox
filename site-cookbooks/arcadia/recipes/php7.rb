@@ -1,15 +1,15 @@
-homebrew_package node[:arcadia][:php7][:package] do
-  options node[:arcadia][:php7][:package_option] if node[:arcadia][:php7][:package_option]
+homebrew_package node['arcadia']['php7']['package'] do
+  options node['arcadia']['php7']['package_option'] if node['arcadia']['php7']['package_option']
 end
 
-node[:arcadia][:php7][:ext_packages].each do |pkg|
+node['arcadia']['php7']['ext_packages'].each do |pkg|
   homebrew_package pkg
 end
 
 # php.ini
-template "#{node[:arcadia][:php7][:conf_path]}/conf.d/arcadia.ini" do
+template "#{node['arcadia']['php7']['conf_path']}/conf.d/arcadia.ini" do
   source 'php7/conf.d/arcadia.ini.erb'
-  owner node[:user][:name]
+  owner node['user']['name']
   group 'admin'
   mode 00644
 end

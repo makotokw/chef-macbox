@@ -38,9 +38,9 @@ homebrew_package 'mysql'
 # gettext
 homebrew_package 'gettext'
 bash "link gettext" do
-  cwd node[:user][:home]
-  user node[:user][:name]
-  group node[:user][:group]
+  cwd node['user']['home']
+  user node['user']['name']
+  group node['user']['group']
   code <<-EOH
     brew link --force gettext
   EOH
@@ -51,17 +51,17 @@ homebrew_package 'graphviz'
 homebrew_package 'imagemagick'
 
 # project dir
-directory node[:arcadia][:project_path] do
-  owner node[:user][:name]
-  group node[:user][:group]
+directory node['arcadia']['project_path'] do
+  owner node['user']['name']
+  group node['user']['group']
   mode 00755
   action :create
 end
 
 # contrib
-directory "#{node[:arcadia][:project_path]}/contrib" do
-  owner node[:user][:name]
-  group node[:user][:group]
+directory "#{node['arcadia']['project_path']}/contrib" do
+  owner node['user']['name']
+  group node['user']['group']
   mode 00755
   action :create
 end
